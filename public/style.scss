@@ -1,0 +1,121 @@
+body {
+    background-color:aliceblue;
+    margin: 0;
+    font-family: sans-serif;
+}
+textarea {
+    font-family: sans-serif;
+}
+
+#descLabel {
+    vertical-align: top;
+}
+
+.checks {
+    vertical-align: middle;
+}
+
+h1 {
+    margin-bottom: 0.25em;
+}
+
+h5 {
+    margin: {
+        top: 0.25em;
+        bottom: 0.25em;
+    }
+}
+
+input[type="checkbox"] {
+    accent-color:rgb(38, 183, 231);
+}
+
+button {
+    background-color: rgb(38, 183, 231);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: {
+        left: 5px;
+        right: 5px;
+    }
+}
+
+form {
+    margin: 1em;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: lightblue;
+    border: 0.125em solid grey;
+    border-radius: 5px;
+}
+
+.form-label {
+    margin-top: 0.5rem;
+}
+
+header {
+  background-color: lightblue;
+  border-bottom: 0.25em solid grey;
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  & > * {
+    margin: 10px;
+  }
+}
+
+#searchLabel {
+    margin: 5px;
+    display: block;
+}
+
+.form-control:focus {
+    background-color: lightblue;
+    border-color: grey;
+    box-shadow: 0 0 0 0.25rem rgba(38, 183, 231, .5);
+}
+
+#searchDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#submitBtn {
+    margin: {
+        left: 0px;
+        top: 1em;
+        bottom: 1em;
+    }
+}
+
+#result {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 8px;
+    div {
+        background-color: lightblue;
+        border: 0.5em solid grey;
+        border-radius: 5px;
+        padding: 1em;
+        min-width: 20%;
+        text-align: center;
+        margin: 0.5em;
+    }
+    .doneTask {
+        background-color: lightgray;
+        * {
+            text-decoration: line-through;
+        }
+        button {
+            background-color: grey;
+        }
+    }
+}
