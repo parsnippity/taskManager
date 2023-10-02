@@ -1,6 +1,7 @@
 //ugly formatting on getOne
-//must unassign assigned tasks or does it do that
+//clean up the database
 
+var deleted = "";
 const result = document.querySelector("#result");
 const add = document.getElementById("add");
 add.addEventListener("click", async function(e) {
@@ -35,6 +36,14 @@ const fetchData = async function() {
         for(let i = 0; i < userDeleteBtn.length; i++){
             let hi = userDeleteBtn[i];
             hi.addEventListener("click", async function (e) {
+                console.log("yes?");
+                let tasks = await axios.get("/tasks");
+                tasks = tasks.data.data;
+                for(let i = 0; i < tasks.length; i++) {
+                    if(tasks[i].assignedTo == this.parentElement.firstElementChild.innerHTML) {
+                        await axios.put(`/tasks/${tasks[i].id}`, {assignedTo: "none"});
+                    }
+                }
                 await axios.delete(`/users/${this.parentElement.id.slice(4)}`);
                 fetchData();
             })
