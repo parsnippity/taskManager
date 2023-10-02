@@ -71,7 +71,7 @@ header {
   }
 }
 
-#searchLabel {
+.searchLabel {
     margin: 5px;
     display: block;
 }
@@ -82,7 +82,7 @@ header {
     box-shadow: 0 0 0 0.25rem rgba(38, 183, 231, .5);
 }
 
-#searchDiv {
+.searchDiv {
     display: flex;
     flex-wrap: wrap;
 }
@@ -96,12 +96,13 @@ header {
 }
 
 #result {
-    display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 8px;
-    div {
-        background-color: lightblue;
+    div:not(.userBoxes) {
+        &:not(.doneTask) {
+            background-color: lightblue;
+        }
         border: 0.5em solid grey;
         border-radius: 5px;
         padding: 1em;
@@ -118,4 +119,9 @@ header {
             background-color: grey;
         }
     }
+}
+
+.userBoxes {
+    display: flex;
+    flex-wrap: wrap;
 }

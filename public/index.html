@@ -8,14 +8,22 @@
 </head>
 <body>
     <header>
-    <button onclick="fetchData()">All tasks</button>
-    <div id="searchDiv">
-        <label for="search" id="searchLabel">Enter Task ID: </label>
+    <button onclick="fetchOnlyTasks()">All tasks</button>
+    <div class="searchDiv">
+        <label for="search" class="searchLabel">Enter Task ID: </label>
         <input type="number" id="search">
         <button id="searchBtn">Search for task by ID</button>
         <p id="message"></p>
     </div>
     <button id="add">Add task</button>
+    <button onclick="fetchData()">All users</button>
+    <div class="searchDiv">
+        <label for="userSearch" class="searchLabel">Enter User ID: </label>
+        <input type="number" id="userSearch">
+        <button id="userSearchBtn">Search for user by ID</button>
+        <p id="userMessage"></p>
+    </div>
+    <button id="addUser">Add user</button>
     </header>
     <div id="result">
 

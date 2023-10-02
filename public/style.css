@@ -68,7 +68,7 @@ header > * {
   margin: 10px;
 }
 
-#searchLabel {
+.searchLabel {
   margin: 5px;
   display: block;
 }
@@ -79,7 +79,7 @@ header > * {
   box-shadow: 0 0 0 0.25rem rgba(38, 183, 231, 0.5);
 }
 
-#searchDiv {
+.searchDiv {
   display: flex;
   flex-wrap: wrap;
 }
@@ -91,19 +91,20 @@ header > * {
 }
 
 #result {
-  display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 8px;
 }
-#result div {
-  background-color: lightblue;
+#result div:not(.userBoxes) {
   border: 0.5em solid grey;
   border-radius: 5px;
   padding: 1em;
   min-width: 20%;
   text-align: center;
   margin: 0.5em;
+}
+#result div:not(.userBoxes):not(.doneTask) {
+  background-color: lightblue;
 }
 #result .doneTask {
   background-color: lightgray;
@@ -113,4 +114,9 @@ header > * {
 }
 #result .doneTask button {
   background-color: grey;
+}
+
+.userBoxes {
+  display: flex;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
