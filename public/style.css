@@ -120,3 +120,7 @@ header > * {
   display: flex;
   flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */
+
+.userBoxes > div {
+  max-width: 30%;
+}
